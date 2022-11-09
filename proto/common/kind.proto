@@ -3,10 +3,17 @@ package proto.common;
 
 option go_package = "github.com/waro163/protobufdemo/proto/common";
 
+import "pb/base.proto";
+
 enum KindType {
     UNKNOWN = 0;
     HUMAN = 1;
     ANIMAL = 2;
     PLANT = 3;
     OBJECT = 4;
+}
+
+message Kind {
+    pb.Base base = 1;
+    KindType type = 2;
 }

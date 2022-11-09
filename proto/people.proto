@@ -1,0 +1,14 @@
+syntax="proto3";
+package proto;
+
+option go_package = "proto";
+
+import "proto/common/kind.proto";
+import "google/protobuf/timestamp.proto";
+
+message People {
+    int32 id = 1;
+    string name = 2;
+    proto.common.KindType type = 3;
+    google.protobuf.Timestamp birth_day = 4;
+}

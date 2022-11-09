@@ -1,0 +1,22 @@
+syntax="proto3";
+package proto.user;
+
+option go_package = "github.com/waro163/protobufdemo/proto/user";
+
+import "proto/user/people.proto";
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    People people = 3;
+}
+
+message UserID {
+    repeated int32 id = 1;
+}
+
+
+service GetUser {
+    rpc GetOneUser(UserID) returns (User){};
+    rpc GetBulkUsers(stream User) returns (stream User){};
+}

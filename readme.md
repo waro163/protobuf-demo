@@ -6,3 +6,15 @@ protoc  --go_out=paths=source_relative:. --go-grpc_out=paths=source_relative:. .
 protoc  --go_out=paths=source_relative:. --go-grpc_out=paths=source_relative:. ./proto/user/people.proto ./proto/user/user.proto
 
 ```
+
+# make
+```
+make gen
+
+```
+
+# clean
+
+```
+make clean
+```
